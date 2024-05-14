@@ -3,11 +3,11 @@ services:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
     network_mode: 'host'
+    restart: 'unless-stopped'
     volumes:
       - config:/config
       - cache:/cache
       - ~/Media:/media
-    restart: 'unless-stopped'
     environment:
       - JELLYFIN_PublishedServerUrl=http://raspberrypi.local:8096
     extra_hosts:

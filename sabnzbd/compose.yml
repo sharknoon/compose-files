@@ -2,6 +2,7 @@ services:
   sabnzbd:
     image: lscr.io/linuxserver/sabnzbd:latest
     container_name: sabnzbd
+    network_mode: host
     restart: unless-stopped
     environment:
       - PUID=1000
