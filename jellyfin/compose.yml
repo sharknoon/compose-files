@@ -8,7 +8,7 @@ services:
       - config:/config
       - cache:/cache
       - type: bind
-        source: ~/Media
+        source: ${HOME}/Media
         target: /media
     restart: 'unless-stopped'
     environment:
