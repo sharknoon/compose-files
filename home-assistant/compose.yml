@@ -24,4 +24,4 @@ services:
 
 volumes:
   config:
-  matter-server-data:
+  data:
