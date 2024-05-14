@@ -10,7 +10,7 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - config:/config
-      - ~/Media:/downloads
+      - /media:/downloads
       - incomplete-downloads:/incomplete-downloads
     ports:
       - 8080:8080
