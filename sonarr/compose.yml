@@ -12,7 +12,7 @@ services:
       - config:/config
       - /media:/media
     ports:
-      - 7878:7878
+      - 8989:8989
 
 volumes:
   config:
