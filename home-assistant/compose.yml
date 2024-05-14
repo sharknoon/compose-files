@@ -1,14 +1,27 @@
 services:
   homeassistant:
-    container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
+    container_name: homeassistant
     restart: unless-stopped
+    privileged: true
+    network_mode: host
     volumes:
       - config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
-    privileged: true
+
+  matter-server:
+    image: ghcr.io/home-assistant-libs/python-matter-server:stable
+    container_name: matter-server
+    restart: unless-stopped
     network_mode: host
+    security_opt:
+      # Needed for Bluetooth via dbus
+      - apparmor:unconfined
+    volumes:
+      - data:/data
+      - /run/dbus:/run/dbus:ro
 
 volumes:
   config:
+  matter-server-data:
