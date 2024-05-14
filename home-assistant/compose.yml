@@ -9,6 +9,8 @@ services:
       - config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
+    devices:
+      - /dev/ttyUSB0
 
   matter-server:
     image: ghcr.io/home-assistant-libs/python-matter-server:stable
