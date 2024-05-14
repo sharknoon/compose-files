@@ -7,9 +7,7 @@ services:
     volumes:
       - config:/config
       - cache:/cache
-      - type: bind
-        source: ${HOME}/Media
-        target: /media
+      - ~/Media:/media
     restart: 'unless-stopped'
     environment:
       - JELLYFIN_PublishedServerUrl=http://raspberrypi.local:8096
