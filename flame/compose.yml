@@ -1,0 +1,22 @@
+services:
+  flame:
+    image: pawelmalak/flame:latest
+    container_name: flame
+    volumes:
+      - data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 5005:5005
+    #secrets:
+    #  - password # optional but required for (1)
+    #environment:
+    #  - PASSWORD=flame_password
+    #  - PASSWORD_FILE=/run/secrets/password # optional but required for (1)
+    restart: unless-stopped
+
+volumes:
+  data:
+
+#secrets:
+#  password:
+#    file: /path/to/secrets/password
