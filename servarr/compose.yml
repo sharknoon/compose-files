@@ -16,6 +16,11 @@ services:
       - '8920:8920'
       #- '1900:1900/udp' in use by home assistant
       - '7359:7359/udp'
+    labels:
+      - flame.type=app
+      - flame.name=Jellyfin
+      - flame.url=http://raspberrypi.local:8096
+      - flame.icon=https://raw.githubusercontent.com/sharknoon/compose-files/main/servarr/jellyfin-icon.svg
 
   jellyseerr:
     image: fallenbagel/jellyseerr:latest
@@ -28,6 +33,11 @@ services:
       - jellyseerr-config:/app/config
     ports:
       - 5055:5055
+    labels:
+      - flame.type=app
+      - flame.name=Jellyseerr
+      - flame.url=http://raspberrypi.local:5055
+      - flame.icon=https://raw.githubusercontent.com/sharknoon/compose-files/main/servarr/jellyseerr-icon.svg
 
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
@@ -41,6 +51,11 @@ services:
       - prowlarr-config:/config
     ports:
       - 9696:9696
+    labels:
+      - flame.type=app
+      - flame.name=Prowlarr
+      - flame.url=http://raspberrypi.local:9696
+      - flame.icon=https://raw.githubusercontent.com/sharknoon/compose-files/main/servarr/prowlarr-icon.svg
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
@@ -55,6 +70,11 @@ services:
       - media:/media
     ports:
       - 7878:7878
+    labels:
+      - flame.type=app
+      - flame.name=Radarr
+      - flame.url=http://raspberrypi.local:7878
+      - flame.icon=https://raw.githubusercontent.com/sharknoon/compose-files/main/servarr/radarr-icon.svg
 
   sonarr:
     image: lscr.io/linuxserver/sonarr:latest
@@ -69,6 +89,11 @@ services:
       - media:/media
     ports:
       - 8989:8989
+    labels:
+      - flame.type=app
+      - flame.name=Sonarr
+      - flame.url=http://raspberrypi.local:8989
+      - flame.icon=https://raw.githubusercontent.com/sharknoon/compose-files/main/servarr/sonarr-icon.svg
 
   # Note: Set the inet_exposure = 4 to access to the SABnzbd UI
 
@@ -86,6 +111,11 @@ services:
       - sabnzbd-incomplete-downloads:/incomplete-downloads
     ports:
       - 8080:8080
+    labels:
+      - flame.type=app
+      - flame.name=SABnzbd
+      - flame.url=http://raspberrypi.local:8080
+      - flame.icon=https://raw.githubusercontent.com/sharknoon/compose-files/main/servarr/sabnzbd-icon.svg
 
 volumes:
   media:

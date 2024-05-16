@@ -6,7 +6,7 @@ services:
       - data:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 5005:5005
+      - 80:5005
     environment:
       - PASSWORD=${PASSWORD}
     restart: unless-stopped

@@ -13,9 +13,9 @@ services:
       - /dev/ttyUSB0
     labels:
       - flame.type=app
-      - flame.name=Home assistant
-      - flame.url=http://raspberrypi
-      - flame.icon=icon-name # optional, default is "docker"
+      - flame.name=Home Assistant
+      - flame.url=http://raspberrypi.local:8123
+      - flame.icon=https://raw.githubusercontent.com/sharknoon/compose-files/main/home-assistant/icon.svg
 
   matter-server:
     image: ghcr.io/home-assistant-libs/python-matter-server:stable
