@@ -81,7 +81,7 @@ services:
     volumes:
       - sabnzbd-config:/config
       - media:/downloads
-      - incomplete-downloads:/incomplete-downloads
+      - sabnzbd-incomplete-downloads:/incomplete-downloads
     ports:
       - 8080:8080
 
@@ -94,3 +94,4 @@ volumes:
   radarr-config:
   sonarr-config:
   sabnzbd-config:
+  sabnzbd-incomplete-downloads:
