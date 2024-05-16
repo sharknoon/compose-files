@@ -11,6 +11,11 @@ services:
       - /run/dbus:/run/dbus:ro
     devices:
       - /dev/ttyUSB0
+    labels:
+      - flame.type=app
+      - flame.name=Home assistant
+      - flame.url=http://raspberrypi
+      - flame.icon=icon-name # optional, default is "docker"
 
   matter-server:
     image: ghcr.io/home-assistant-libs/python-matter-server:stable
