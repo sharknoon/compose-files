@@ -1,3 +1,5 @@
+# Note: Set the PASSWORD environment variable to access the Flame UI
+
 services:
   flame:
     image: pawelmalak/flame:multiarch
@@ -7,16 +9,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 5005:5005
-    #secrets:
-    #  - password # optional but required for (1)
-    #environment:
-    #  - PASSWORD=flame_password
-    #  - PASSWORD_FILE=/run/secrets/password # optional but required for (1)
     restart: unless-stopped
 
 volumes:
   data:
-
-#secrets:
-#  password:
-#    file: /path/to/secrets/password

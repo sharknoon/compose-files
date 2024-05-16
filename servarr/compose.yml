@@ -70,6 +70,8 @@ services:
     ports:
       - 8989:8989
 
+  # Note: Set the inet_exposure = 4 to access to the SABnzbd UI
+
   sabnzbd:
     image: lscr.io/linuxserver/sabnzbd:latest
     container_name: sabnzbd
