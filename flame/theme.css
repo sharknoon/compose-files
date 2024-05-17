@@ -100,3 +100,8 @@ body {
     margin-right: auto;
   }
 }
+
+/* Remove settings link */
+.Header_SettingsLink__9QdDu {
+  display: none;
+}
