@@ -1,12 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+/* Background image */
+body {
+  background-image: url("https://raw.githubusercontent.com/sharknoon/compose-files/main/flame/wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* Welcome Header */
+.Header_HeaderMain__oLoBB {
+  justify-content: center !important;
+  text-align: center;
+  font-family: "Inter", "Roboto", sans-serif;
+}
+
+/* Remove "Applications" header */
+.SectionHeadline_SectionHeadline__xa0oJ {
+  display: none;
+}
+
+/* Reset app icon wrapper */
 .AppCard_AppCardIcon__ThrUl {
   width: initial !important; 
   height: initial !important;
   margin: 0 !important;
 }
 
+/* Make app icons bigger and round */
 .AppCard_AppCard__NPTM5 svg {
+  scale: 100%;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
   width: 4rem;
   height: 4rem;
   border-radius: 15px;
@@ -41,11 +66,37 @@
   box-shadow: 0 0 0 8px rgb(255 255 255 / 0.25);
 }
 
+/* Give apps a little bit more space around them */
 .AppCard_AppCard__NPTM5 {
-  margin: 0 !important;
+  margin: 7px 0 !important;
 }
 
+/* App Grid configurations */
 .AppGrid_AppGrid__ZxiaC {
   row-gap: 12px;
   column-gap: 30px;
+  grid-template-columns: repeat(2,1fr) !important;
+}
+@media (min-width: 350px) {
+  .AppGrid_AppGrid__ZxiaC {
+    grid-template-columns: repeat(3,1fr) !important;
+  }
+}
+@media (min-width: 430px) {
+  .AppGrid_AppGrid__ZxiaC {
+    grid-template-columns: repeat(4,1fr) !important;
+  }
+}
+@media (min-width: 785px) {
+  .AppGrid_AppGrid__ZxiaC {
+    grid-template-columns: repeat(5,1fr) !important;
+  }
+}
+@media (min-width: 935px) {
+  .AppGrid_AppGrid__ZxiaC {
+    grid-template-columns: repeat(6,1fr) !important;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
