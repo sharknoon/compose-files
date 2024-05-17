@@ -107,7 +107,7 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - sabnzbd-config:/config
-      - media:/downloads
+      - media:/media
       - sabnzbd-incomplete-downloads:/incomplete-downloads
     ports:
       - 8080:8080
