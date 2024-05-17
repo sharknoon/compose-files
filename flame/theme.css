@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.AppCard_AppCardIcon__ThrUl {
+  width: initial !important; 
+  height: initial !important;
+  margin: 0 !important;
+}
+
+.AppCard_AppCard__NPTM5 svg {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 15px;
+}
+
+/* Hide application address */
+.AppCard_AppCardDetails__HgNoY span {
+  display: none;
+}
+
+/* Align apps like an smartphoine homescreen */
+.AppCard_AppCard__NPTM5 {
+  flex-direction: column;
+  gap: .5rem;
+}
+.AppCard_AppCardDetails__HgNoY h5 {
+  text-transform: initial;
+  font-size: 13px !important;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.60));
+  font-weight: 400 !important;
+  margin: 0 !important;
+  font-family: "Inter", "Roboto", sans-serif;
+}
+.AppCard_AppCard__NPTM5:hover {
+  background-color: initial !important;
+}
+.AppCard_AppCard__NPTM5:hover svg {
+  scale: 110%;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  box-shadow: 0 0 0 8px rgb(255 255 255 / 0.25);
+}
+
+.AppCard_AppCard__NPTM5 {
+  margin: 0 !important;
+}
+
+.AppGrid_AppGrid__ZxiaC {
+  row-gap: 12px;
+  column-gap: 30px;
+}
